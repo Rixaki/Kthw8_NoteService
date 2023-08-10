@@ -92,10 +92,13 @@ class WallNotes {
         //} else return -1
     }
 
-    fun get() {
+    fun get(): MutableList<Note> {
+        val resultList = mutableListOf<Note>()
         for (note in notes) {
-            println(note)
+            //println(note)
+            resultList += note
         }
+        return resultList
     }
 
     fun getById(noteId: Int): Note? {
@@ -107,7 +110,9 @@ class WallNotes {
         }
     }
 
+    /*
     fun clear() {
         notes = mutableListOf<Note>()
     }
+     */
 }

@@ -9,10 +9,12 @@ import org.junit.Test
 
 class MainKtTest {
 
+    /*
     @Before
     fun clearBeforeTest() {
         WallNotes().clear()
     }
+    */
 
     @Test
     fun addNoteTest() {

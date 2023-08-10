@@ -60,12 +60,15 @@ data class Note(
         } else return -1
     }
 
-    fun getComments() {
+    fun getComments(): MutableList<Comment> {
+        val resultList = mutableListOf<Comment>()
         for (comment in commentsList) {
             if (!comment.isDeleted) {
-                println(comment)
+                //println(comment)
+                resultList += comment
             }
         }
+        return resultList
     }
 
     fun restoreComment(commentId: Int): Int {
